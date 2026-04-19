@@ -10,7 +10,7 @@ Initial public set. Expanding over time.
 
 ## Scope
 
-These reference architectures are grounded in:
+I ground these reference architectures in:
 
 - Ingestion and multimodal data handling  
 - Canonical identity and deterministic IDs  
@@ -18,15 +18,15 @@ These reference architectures are grounded in:
 - Retrieval across structured, graph, and vector representations  
 - Governance and system-level consistency  
 
-The focus is on how systems are structured and how tradeoffs are reasoned about, not on specific tools or frameworks.
+The focus is on how we structure systems and reason about tradeoffs, not on specific tools or frameworks.
 
 ---
 
 ## Architecture Backbone
 
-Across all examples, the same core flow is used:
+All examples follow the same core flow:
 
-data → ingestion → storage → retrieval → application → governance
+**data → ingestion → storage → retrieval → application → governance**
 
 This provides a consistent way to decompose complex systems and reason about tradeoffs.
 
@@ -56,7 +56,7 @@ These examples are intended to:
 - help teams reason about architecture before implementation  
 - offer reusable patterns that can be adapted to different environments  
 
-They are not intended to be copied directly into production without adaptation.
+Do not copy these directly into production without adaptation.
 
 ---
 
@@ -66,7 +66,7 @@ They are not intended to be copied directly into production without adaptation.
   Deterministic IDs ensure consistency across representations.
 
 - Ingestion defines truth  
-  Identity, metadata, and provenance are established once and propagated.
+  Ingestion establishes identity, metadata, and provenance once, and the system propagates them everywhere downstream.
 
 - Retrieval is a primary driver of system effectiveness  
   Especially in AI systems, retrieval quality determines output quality.
@@ -81,7 +81,7 @@ They are not intended to be copied directly into production without adaptation.
 
 ## Notes
 
-These patterns are intentionally simplified and may omit environment-specific implementation details.  
-They are designed to reflect real architectural thinking in a clear and reusable form.
+I intentionally simplified these patterns and may omit environment-specific implementation details.  
+I designed these patterns to reflect real architectural thinking in a clear and reusable form.
 
 Derived from systems I have built or designed over time, adapted here into simplified reference architectures.
