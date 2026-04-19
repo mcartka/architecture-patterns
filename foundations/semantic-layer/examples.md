@@ -1,6 +1,3 @@
-
-## `examples.md`
-
 ```markdown
 # Examples
 
