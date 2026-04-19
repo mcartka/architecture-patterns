@@ -1,8 +1,8 @@
 # Architecture Patterns for Data and AI Systems
 
-I maintain this repository as a public reference for architecture patterns used when designing data and AI systems, to make these approaches more accessible to nonprofits and smaller teams that may not have dedicated architecture resources.
+I maintain this repository as a public reference for architecture patterns used to design data and AI systems, to make these approaches more accessible to nonprofits and smaller teams that may not have dedicated architecture resources.
 
-These are architecture-first designs, not production deployments, based on patterns I have used in real systems, adapted here into simplified, reusable examples.
+These are architecture-first designs, not production deployments, based on patterns I have used in real systems, adapted into simplified, reusable examples.
 
 Initial public set. Expanding over time.
 
@@ -18,7 +18,7 @@ These reference architectures are grounded in:
 - Retrieval across structured, graph, and vector representations  
 - Governance and system-level consistency  
 
-The focus is on how systems are structured and reasoned about, not on specific tools or frameworks.
+The focus is on how systems are structured and how tradeoffs are reasoned about, not on specific tools or frameworks.
 
 ---
 
@@ -68,7 +68,7 @@ They are not intended to be copied directly into production without adaptation.
 - Ingestion defines truth  
   Identity, metadata, and provenance are established once and propagated.
 
-- Retrieval drives system effectiveness  
+- Retrieval is a primary driver of system effectiveness  
   Especially in AI systems, retrieval quality determines output quality.
 
 - Governance wraps around all layers  
