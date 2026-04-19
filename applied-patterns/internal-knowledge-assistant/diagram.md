@@ -17,6 +17,12 @@ flowchart TD
     I --> K[Vector Retrieval]
     I --> L[Structured Filters]
 
+    %% 🔗 CONNECT THE TWO HALVES
+    E --> K
+    F --> J
+    F --> L
+    G --> L
+
     J --> M[Candidate Results]
     K --> M
     L --> M
