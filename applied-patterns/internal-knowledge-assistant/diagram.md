@@ -3,32 +3,54 @@
 ```mermaid
 flowchart LR
 
-    A[Internal Sources] --> B[Ingestion]
-    B --> C[Canonical Identity]
-    C --> D[Chunking + Metadata]
+    subgraph S1[Ingestion]
+        A[Internal Sources] --> B[Ingestion]
+        B --> C[Canonical Identity]
+        C --> D[Chunking + Metadata]
+    end
 
-    D --> E[Vector Index]
-    D --> F[Metadata Store]
-    D --> G[Graph Layer]
+    subgraph S2[Representations]
+        E[Vector Index]
+        F[Metadata Store]
+        G[Graph Layer]
+    end
 
-    H[User Query] --> I[Query Interpretation]
+    subgraph S3[Query]
+        H[User Query] --> I[Query Interpretation]
+    end
 
-    I --> J[Keyword Retrieval]
-    I --> K[Vector Retrieval]
-    I --> L[Structured Filters]
+    subgraph S4[Retrieval]
+        J[Keyword Retrieval]
+        K[Vector Retrieval]
+        L[Structured Filters]
+        M[Candidate Results]
+        N[Ranking]
+    end
 
-    %% 🔗 CONNECT THE TWO HALVES
-    E --> K
+    subgraph S5[Generation]
+        O[Context Assembly]
+        P[LLM]
+        Q[Answer + Citations]
+    end
+
+    D --> E
+    D --> F
+    D --> G
+
+    I --> J
+    I --> K
+    I --> L
+
     F --> J
+    E --> K
     F --> L
     G --> L
 
-    J --> M[Candidate Results]
+    J --> M
     K --> M
     L --> M
 
-    M --> N[Ranking and Filtering]
-    N --> O[Context Assembly]
-
-    O --> P[LLM]
-    P --> Q[Answer + Citations]
+    M --> N
+    N --> O
+    O --> P
+    P --> Q
