@@ -45,5 +45,5 @@ It can also define relationships such as:
 - Case includes Event
 - Document supports Case
 - Event occurred_at Location
-
+```
 This creates a consistent conceptual model across heterogeneous systems.
