@@ -1,7 +1,7 @@
 # Internal Knowledge Assistant Flow
 
 ```mermaid
-flowchart TD
+flowchart LR
 
     A[Internal Sources] --> B[Ingestion]
     B --> C[Canonical Identity]
