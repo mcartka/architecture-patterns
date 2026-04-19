@@ -66,7 +66,7 @@ The system follows a retrieval-first design:
 
 ## Core Flow
 
-data → ingestion → identity → chunking → indexing → retrieval → ranking → answer generation → citation
+**data → ingestion → identity → chunking → indexing → retrieval → ranking → answer generation → citation**
 
 The system treats retrieval as the critical step that determines answer quality.
 
